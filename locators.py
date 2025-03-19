@@ -27,6 +27,4 @@ class Locators:
     BUTTON_FILLING = (By.XPATH, ".//div[span[text() = 'Начинки']]")
     BUTTON_SAUCE = (By.XPATH, ".//div[span[text() = 'Соусы']]")
     BUTTON_BUN = (By.XPATH, ".//div[span[text() = 'Булки']]")
-    FIRST_SAUCE_IN_LIST = (By.XPATH, './/p[text()="Соус Spicy-X"]')
-    FIRST_BUN_IN_LIST = (By.XPATH, ".//p[text()='Флюоресцентная булка R2-D3']")
-    FIRST_FILLING_IN_LIST = (By.XPATH,'.//p[text()="Мясо бессмертных моллюсков Protostomia"]')
+

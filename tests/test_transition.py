@@ -29,17 +29,18 @@ class TestTransition:
     def test_transition_bun(self, driver_main):
         driver_main.find_element(*Locators.BUTTON_SAUCE).click()
         driver_main.find_element(*Locators.BUTTON_BUN).click()
-        assert driver_main.find_element(*Locators.FIRST_BUN_IN_LIST).text == "Флюоресцентная булка R2-D3"
+        select = driver_main.find_element(*Locators.BUTTON_BUN).get_attribute("class")
+        assert 'tab_tab__1SPyG tab_tab_type_current__2BEPc pt-4 pr-10 pb-4 pl-10 noselect' == select
 
     def test_transition_sauce(self, driver_main):
         driver_main.find_element(*Locators.BUTTON_SAUCE).click()
-        assert driver_main.find_element(*Locators.FIRST_SAUCE_IN_LIST).text == "Соус Spicy-X"
+        select = driver_main.find_element(*Locators.BUTTON_SAUCE).get_attribute("class")
+        assert 'tab_tab__1SPyG tab_tab_type_current__2BEPc pt-4 pr-10 pb-4 pl-10 noselect' == select
 
     def test_transition_filling(self, driver_main):
         driver_main.find_element(*Locators.BUTTON_FILLING).click()
-        assert driver_main.find_element(
-            *Locators.FIRST_FILLING_IN_LIST).text == "Мясо бессмертных моллюсков Protostomia"
-
+        select = driver_main.find_element(*Locators.BUTTON_FILLING).get_attribute("class")
+        assert 'tab_tab__1SPyG tab_tab_type_current__2BEPc pt-4 pr-10 pb-4 pl-10 noselect' == select
 
 
 
